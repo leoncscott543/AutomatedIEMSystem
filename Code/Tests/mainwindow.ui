@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>131</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Recording</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="main_plot" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>661</width>
+      <height>241</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>0</y>
+      <width>131</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Upload .wav file</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>0</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Edit Wave</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>0</y>
+      <width>111</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Automate Edit</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuSave_wav_file_as">
+     <property name="title">
+      <string>Save .wav file as </string>
+     </property>
+     <addaction name="actionSave_as_flac"/>
+     <addaction name="actionSave_as_mp3"/>
+    </widget>
+    <addaction name="actionNew_file"/>
+    <addaction name="actionOpen_wav_file"/>
+    <addaction name="actionSave_wav_file"/>
+    <addaction name="menuSave_wav_file_as"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuAudio_Mixing">
+     <property name="title">
+      <string>Audio Mixing</string>
+     </property>
+     <addaction name="actionOpen_Editor"/>
+    </widget>
+    <addaction name="menuAudio_Mixing"/>
+    <addaction name="actionj"/>
+   </widget>
+   <widget class="QMenu" name="menuRecord">
+    <property name="title">
+     <string>Record</string>
+    </property>
+    <addaction name="actionBegin_Recording"/>
+    <addaction name="actionEnd_Recording"/>
+    <addaction name="actionReset_Recording"/>
+   </widget>
+   <widget class="QMenu" name="menuAudio">
+    <property name="title">
+     <string>Audio</string>
+    </property>
+    <widget class="QMenu" name="menuPlay">
+     <property name="title">
+      <string>Play</string>
+     </property>
+     <addaction name="actionRaw_Audio"/>
+     <addaction name="actionFiltered_Audio"/>
+     <addaction name="actionEdited_Audio"/>
+     <addaction name="actionAudio_History"/>
+    </widget>
+    <addaction name="menuPlay"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuRecord"/>
+   <addaction name="menuAudio"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen_wav_file">
+   <property name="text">
+    <string>Open .wav file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave_wav_file">
+   <property name="text">
+    <string>Save .wav file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionNew_file">
+   <property name="text">
+    <string>New file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionBegin_Recording">
+   <property name="text">
+    <string>Begin Recording</string>
+   </property>
+  </action>
+  <action name="actionEnd_Recording">
+   <property name="text">
+    <string>End Recording</string>
+   </property>
+  </action>
+  <action name="actionSave_as_flac">
+   <property name="text">
+    <string>Save as .flac</string>
+   </property>
+  </action>
+  <action name="actionSave_as_mp3">
+   <property name="text">
+    <string>Save as .mp3</string>
+   </property>
+  </action>
+  <action name="actionReset_Recording">
+   <property name="text">
+    <string>Reset Recording</string>
+   </property>
+  </action>
+  <action name="actionRaw_Audio">
+   <property name="text">
+    <string>Raw Audio</string>
+   </property>
+  </action>
+  <action name="actionFiltered_Audio">
+   <property name="text">
+    <string>Filtered Audio</string>
+   </property>
+  </action>
+  <action name="actionEdited_Audio">
+   <property name="text">
+    <string>Edited Audio</string>
+   </property>
+  </action>
+  <action name="actionOpen_Editor">
+   <property name="text">
+    <string>Open Editor</string>
+   </property>
+  </action>
+  <action name="actionj">
+   <property name="text">
+    <string>Automate Sound Editing</string>
+   </property>
+  </action>
+  <action name="actionAudio_History">
+   <property name="text">
+    <string>Audio History</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
