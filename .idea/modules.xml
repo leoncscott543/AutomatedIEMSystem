@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/EssentiaTesting.iml" filepath="$PROJECT_DIR$/.idea/EssentiaTesting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/AutomatedIEMSystem.iml" filepath="$PROJECT_DIR$/.idea/AutomatedIEMSystem.iml" />
     </modules>
   </component>
 </project>
